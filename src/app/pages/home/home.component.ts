@@ -13,8 +13,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) this.loadLinkedInPlatformScript();
-    
+    // if (isPlatformBrowser(this.platformId)) this.loadLinkedInPlatformScript();
   }
 
   private loadLinkedInPlatformScript(): void {
