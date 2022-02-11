@@ -9,6 +9,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { CurriculumVitaeComponent } from './pages/curriculum-vitae/curriculum-vitae.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
+import { LayoutModule } from './layout/layout.module';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { AboutMeComponent } from './pages/about-me/about-me.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    LayoutModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
