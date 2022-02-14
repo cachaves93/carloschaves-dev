@@ -1,0 +1,9 @@
+.img--background-effect {
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 65px;
+    width: 300px;
+    height: 300px;
+    border: 8px solid white;
+    z-index: 0;
+}
