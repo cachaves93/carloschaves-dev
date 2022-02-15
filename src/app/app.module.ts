@@ -10,6 +10,8 @@ import { CurriculumVitaeComponent } from './pages/curriculum-vitae/curriculum-vi
 import { HomeComponent } from './pages/home/home.component';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { LayoutModule } from './layout/layout.module';
+import { CardComponent } from './shared/components/card/card.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -19,9 +21,7 @@ import { LayoutModule } from './layout/layout.module';
     AppRoutingModule,
     HttpClientModule,
     LayoutModule,
-    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
-    // and returns simulated server responses.
-    // Remove it when a real server is ready to receive requests.
+    SharedModule,
   ],
   declarations: [
     AppComponent,

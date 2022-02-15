@@ -1,4 +1,4 @@
-<section class="bg-slate-100">
+<section class="bg-slate-100 pb-3">
     <div 
         class="
             grid grid-cols-1
@@ -11,17 +11,16 @@
                 col-span-1
                 md:col-span-2
                 lg:col-span-2
-                place-self-center
-                border border-black
                 text-center
+                mt-0 md:mt-4
             "
         >
             <img 
-                class="rounded-full border-2 border-black"
+                class="mx-auto rounded-full border-2 border-black"
                 src="../../../assets/_MG_0073.jpg"
             />
             <address>
-                <p class="text-xl font-bold">
+                <p class="text-2xl font-bold">
                     Carlos Chaves
                 </p>
                 <p class="text-xl">
@@ -34,6 +33,175 @@
                 </p>
             </address>
         </figure>
-        
+        <div 
+            class="
+                col-span-1
+                md:col-span-3
+                lg:col-span-5
+                mt-3
+            "
+        >
+            <h2 class="text-4xl"> Work Experience </h2>
+            <div 
+                class="
+                    max-h-96 overflow-hidden relative
+                    transition-all ease-in-out duration-1000
+                "
+                id="work-experience"
+            >
+                <app-card
+                    headerText="Senior Software Engineer @ Act Digital / Moderna"
+                    subHeader="Dec/2021 - Current"
+                >
+                    <div class="px-4 mt-2">
+                        Acting as an outsourced fullstack developer for Moderna, Inc.
+                        <ul class="list-disc px-4">
+                            <li>
+                                Migrating apps from AngularJS to Angular13
+                            </li>
+                            <li>
+                                Custom state management design pattern
+                            </li>
+                            <li>
+                                Heavy use of RxJS
+                            </li>
+                            <li>
+                                Maintaning server side with NodeJS + Express + Sequelize
+                            </li>
+                            <li>
+                                Contributing on design pattern and building upon company libraries
+                            </li>
+                        </ul>
+                    </div>
+                </app-card>
+                <app-card
+                    headerText="Software Engineer @ Eteg"
+                    subHeader="Aug/2020 - Dec/2021"
+                >
+                    <div class="px-4 mt-2">
+                        Acted as a fullstack developer
+                        <ul class="list-disc px-4">
+                            <li>
+                                Developing and maintaining ERP softwares
+                            </li>
+                            <li>
+                                Client-side tech stacks used were mostly AngularJS and Angular2+
+                            </li>
+                            <li>
+                                Server-side tech stacks were mostly Java/Groovy and NodeJS
+                            </li>
+                            <li>
+                                Developing and maintaining databases on PostgreSQL and MySQL
+                            </li>
+                        </ul>
+                    </div>
+                </app-card>
+                <app-card
+                    headerText="Junior Software Engineer @ Belo Horizonte City Hall"
+                    subHeader="Dez/2019 - Aug/2020"
+                >
+                    <div class="px-4 mt-2">
+                        Acted as a fullstack developer
+                        <ul class="list-disc px-4">
+                            <li>
+                                Development of a software made to attend one of the city hall sectors
+                            </li>
+                            <li>
+                                Stacks used were mostly AngularJS, Java Springboot and PostgreSQL
+                            </li>
+                            <li>
+                                A lot of influence over the product management and roadmap
+                            </li>
+                        </ul>
+                    </div>
+                </app-card>
+                <app-card
+                    headerText="Intern @ Belo Horizonte City Hall"
+                    subHeader="Jan/2018 - Dez/2019"
+                >
+                    <div class="px-4 mt-2">
+                        Acted as a civil engineering intern who eventually migrated to a developer position
+                        <ul class="list-disc px-4">
+                            <li>
+                                First year was mostly coordinating a team of interns and improving the sector's workflow
+                            </li>
+                            <li>
+                                Second year I started developing and maintaining a system to manage the department activities
+                                and legal process
+                            </li>
+                        </ul>
+                    </div>
+                </app-card>
+                <div
+                    *ngIf="!openedSectionState.get('work-experience')"
+                    class="
+                        h-16
+                        absolute top-80 left-0 
+                        w-full text-center m-0
+                        bg-gradient-to-b from-transparent to-white
+                    "
+                >
+                    <button 
+                        class="
+                            mt-5
+                            text-indigo-700
+                            font-bold
+                            text-md
+                        "
+                        (click)="removeHeightLimit('work-experience')"
+                    >
+                        <div class="w-full flex flex-col justify-center">
+                            Read more
+                            <p class="mx-auto">
+                                <svg 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    width="16" 
+                                    height="16" 
+                                    fill="currentColor" 
+                                    class="bi bi-arrow-down-circle-fill" 
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+                                </svg>
+                            </p>
+                        </div>
+                    </button>
+                </div>
+                <p *ngIf="openedSectionState.get('work-experience')">
+                    <button
+                        class="
+                            w-11/12
+                            text-center
+                            text-indigo-700
+                            font-bold text-md
+                            mt-3 py-2
+                            border-2 border-indigo-700 bg-white
+                        "
+                        (click)="addHeightLimit('work-experience')"
+                    >
+                        <span class="w-full flex justify-center">
+                            <span class="mr-2 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
+                                </svg>
+                            </span>
+                            Hide
+                            <span class="ml-2 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
+                </p>
+            </div>
+            <h2 class="text-4xl mt-3"> Education </h2>
+            <app-card
+                headerText="Universidade Federal de Minas Gerais"
+                subHeader="Civil Engineering - Graduated on Dec/2019"
+            >
+
+            </app-card>
+        </div>
     </div>
 </section>
