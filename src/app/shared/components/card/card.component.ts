@@ -9,6 +9,7 @@ export class CardComponent implements OnInit {
 
   @Input() headerText?: string;
   @Input() subHeader?: string;
+  @Input() hasHeaderSeparator: boolean = true;
 
   constructor() { }
 

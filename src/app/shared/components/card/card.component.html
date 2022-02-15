@@ -10,10 +10,10 @@
 >
     <div class="px-2">
         <span class="text-2xl">{{ headerText }}</span>
-        <p>
+        <p class="text-zinc-500">
             {{ subHeader }}
         </p>
-        <div class="border-2 border-black w-11/12"></div>
+        <div *ngIf="hasHeaderSeparator" class="border-2 border-black w-full mr-2"></div>
     </div>
     <ng-content></ng-content>
 </div>

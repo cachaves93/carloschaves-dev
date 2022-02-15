@@ -1,0 +1,9 @@
+<div class="w-full bg-slate-50 rounded-md px-px" #container>
+    <span
+        *ngFor="let point of [].constructor(totalSkillPoints); index as i"
+        class="border-2 border-indigo-700 rounded-3xl inline-block mx-px mb-1"
+        [ngClass]="{'opacity-20': i + 1 > currentSkillPoints }"
+        #skillPoint
+    >
+    </span>
+</div>
