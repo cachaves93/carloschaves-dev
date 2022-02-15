@@ -12,6 +12,7 @@ import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { LayoutModule } from './layout/layout.module';
 import { CardComponent } from './shared/components/card/card.component';
 import { SharedModule } from './shared/shared.module';
+import { SideProjectsComponent } from './pages/side-projects/side-projects.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SharedModule } from './shared/shared.module';
     AppComponent,
     CurriculumVitaeComponent,
     HomeComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    SideProjectsComponent
   ],
   bootstrap: [ AppComponent ]
 })
