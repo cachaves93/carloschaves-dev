@@ -7,13 +7,22 @@
         bg-white
         shadow shadow-black
     "
+    [ngClass]="{ 'grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7': imgSrc }"
 >
-    <div class="px-2">
+    <div *ngIf="imgSrc" class="col-span-1 lg:col-span-2">
+        <img class="max-w-full" [src]="imgSrc" />
+    </div>
+    <div class="px-2" [ngClass]="{'col-span-1 md:col-span-2 lg:col-span-5': imgSrc}">
         <span class="text-2xl">{{ headerText }}</span>
         <p class="text-zinc-500">
             {{ subHeader }}
         </p>
         <div *ngIf="hasHeaderSeparator" class="border-2 border-black w-full mr-2"></div>
+        <ng-content></ng-content>
+        <ng-container *ngIf="imgCarouselUrls">
+            <app-carousel
+                [imgUrls]="imgCarouselUrls"
+            ></app-carousel>
+        </ng-container>
     </div>
-    <ng-content></ng-content>
 </div>
