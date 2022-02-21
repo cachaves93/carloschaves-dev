@@ -5,12 +5,15 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css']
 })
-export class CarouselComponent implements OnInit {
+export class CarouselComponent {
 
-  @Input() imgUrls?: string[];
+  @Input() imgUrls: string[] = [];
+
+  currentImgIndex: number = 0
 
   constructor() { }
 
-  ngOnInit(): void {}
-
+  updateImgIndexValueByNumber(number: number) {
+    this.currentImgIndex += number;
+  }
 }

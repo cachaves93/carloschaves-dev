@@ -1,23 +1,91 @@
-<section>
+<section 
+    class="
+        grid grid-cols-1
+        md:grid-cols-2
+    "
+>
     <app-card
         headerText="SmartApp"
-        subHeader="https://smartleiloes.app"
-        imgSrc="../../../../assets/smart-app-home.png"
         [imgCarouselUrls]="
             [
                 '../../../../assets/smart-app-home.png',
-                '../../../../assets/smart-app-home.png',
-                '../../../../assets/smart-app-home.png'
+                '../../../../assets/smart-app-calculadora-1.png',
+                '../../../../assets/smart-app-calculadora-2.png',
+                '../../../../assets/smart-app-calculadora-3.png',
+                '../../../../assets/smart-app-calculadora-4.png',
+                '../../../../assets/smart-app-imoveis-1.png',
+                '../../../../assets/smart-app-imoveis-2.png',
             ]
         "
     >
         <div>
-            SmartApp is an app that aims to provide tools to help brazilian real state investors
+            <b>SmartApp</b> is an app that aims to provide tools to help brazilian real state investors
             participate in real state auctions with the required knowledge to make good decisions.
             Some of its main features includes a personalized real state investment calculator,
             access to compiled data on the main real state auction opportunities in Brazil, management
-            of real state you're interested in and notifications for opportunities over the areas
-            you're interested in. 
+            and notifications for real state auction opportunities over the areas you're interested in.
+            Main tech stacks used were Angular, NodeJS, Ionic(native apps) and Google Cloud Platform.
+            <div class="mt-1">
+                <a 
+                    href="https://smartleiloes.app" 
+                    target="_blank"
+                    class="text-blue-600 hover:text-blue-800"
+                >
+                    Website
+                </a>
+                <span class="px-2 font-bold">
+                    |
+                </span>
+                <a 
+                    href="https://play.google.com/store/apps/details?id=app.smartleiloes" 
+                    target="_blank"
+                    class="text-blue-600 hover:text-blue-800"
+                >
+                    App on Google Play
+                </a>
+            </div>
+        </div>
+    </app-card>
+    <app-card
+        headerText="App à Obra"
+        [imgCarouselUrls]="
+            [
+                '../../../../assets/smart-app-home.png'
+            ]
+        "
+    >
+        <b>App a Obra</b> is an app that aims to help civil engineering companies
+        be more structured and organized in its processes. It is currently in
+        development and the main features right now includes tools that provides
+        better management of construction daily reports along with equipment inspection 
+        and repairments workflow.
+        <div class="mt-1">
+            <a 
+                href="https://smartleiloes.app" 
+                target="_blank"
+                class="text-blue-600 hover:text-blue-800"
+            >
+                Website
+            </a>
+        </div>
+    </app-card>
+    <app-card
+        headerText="My Portfolio"
+    >
+        The very site you're in right now! In this site, I want to provide 
+        recruiters and anyone else who might be interested in my work a better
+        understanding of what I do. The tech stack used here is Angular Universal,
+        a technology for server-side rendering angular apps.
+        Since it is not a commercial project, it is open-sourced and you can check
+        its code on the link below 😉
+        <div class="mt-1">
+            <a 
+                href="https://github.com/cachaves93/carloschaves-dev" 
+                target="_blank"
+                class="text-blue-600 hover:text-blue-800"
+            >
+                Github
+            </a>
         </div>
     </app-card>
 </section>

@@ -1,0 +1,7 @@
+.drawing-canvas {
+    height: calc(100vh - 5rem);
+}
+
+.img-max-height {
+    max-height: calc(calc(100vh - 5rem) - 10%);
+}

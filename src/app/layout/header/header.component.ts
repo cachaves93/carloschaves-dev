@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+
+  public isSidebarOpen: boolean = false;
 
   constructor() { }
 
-  ngOnInit(): void {
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
   }
-
 }
