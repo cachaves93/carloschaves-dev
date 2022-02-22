@@ -1,45 +1,86 @@
 <section 
     class="
-        flex flex-col
-        md:flex-row
-        justify-around
+        grid grid-cols-1
+        md:grid-cols-2
         bg-slate-800
         py-8
-        
+        justify-items-center
     "
 >
-    <div class="w-full flex justify-center">
-
+    <div class="col-span-1 w-full flex justify-center">
         <div
             class="
                 flex
                 text-white text-center
-                rounded-lg 
-                max-w-screen-md
+                rounded-lg
             "
         >
             <div class="p-4 text-white text-xl leading-8">
                 <p>
                     Hello and welcome to my website! I'm
                 </p>
-                <p class="text-8xl">
+                <p class="text-5xl hidden md:inline">
                     Carlos Chaves,
+                </p>
+                <p class="md:hidden flex justify-center items-center">
+                    <span class="text-5xl">
+                        <p>Carlos</p>
+                        <p>Chaves,</p>
+                    </span>
+                    <span class="text-9xl">🧑🏽‍💻</span>
                 </p>
                 <p>
                     a web developer passionate about
                     coding, math, physics and solving problems.
-                    In this website you will find more about
-                    my life and my work.
-                </p>
-                <p>
                     Come in and make yourself at home 😀
                 </p>
             </div>
         </div>
     </div>
-    <div class="flex w-full justify-center">
-        <img class="border-8 border-white z-10" src="../../../assets/20210130_161453.jpg" />
-        <div class="img--background-effect"></div>
+    <div class="col-span-1 text-center w-full hidden md:inline">
+        <span class="text-9xl">🧑🏽‍💻</span>
+    </div>
+    <div class="col-span-2 text-center text-white w-full">
+        <span class="text-2xl">
+            What do you want to know about me?
+        </span>
+        <div 
+            class="
+                mt-2
+                grid grid-cols-1
+                md:grid-cols-3
+                md:gap-2
+                gap-y-2
+            "
+        >
+            <a 
+                href="/curriculum-vitae"
+                class="
+                    border border-white p-4 rounded-lg
+                    hover:bg-white hover:text-slate-800 hover:border-slate-800
+                "
+            >
+                Let me know more about your qualifications and experience
+            </a>
+            <a
+                href="/side-projects"
+                class="
+                    border border-white p-4 rounded-lg
+                    hover:bg-white hover:text-slate-800 hover:border-slate-800
+                "
+            >
+                Let me know more about projects you've built
+            </a>
+            <a
+                href="/about-me"
+                class="
+                    border border-white p-4 rounded-lg
+                    hover:bg-white hover:text-slate-800 hover:border-slate-800
+                "
+            >
+                Let me know more about you
+            </a>
+        </div>
     </div>
 </section>
 <section class="flex justify-center">
@@ -56,7 +97,7 @@
             "
         >
             <div class="row-span-2 self-center">
-                <iframe src="https://cachaves93.github.io/" width="335" height="263"></iframe>
+                <iframe src="https://cachaves93.github.io/" width="350" height="290"></iframe>
             </div>
             <div>
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/cachaves93">

@@ -1,7 +1,10 @@
 <div class="w-full inline-block h-60 border border-black">
     <div class="w-full h-full relative">
         <div class="flex flex-row justify-center">
-            <img class="h-60" [src]="imgUrls[currentImgIndex]" />
+            <img 
+                class="h-60 object-contain" 
+                [src]="imgUrls[currentImgIndex]" 
+            />
         </div>
         <div
             *ngIf="currentImgIndex > 0"
@@ -11,12 +14,14 @@
                 h-60
                 w-12
                 bg-gray-200
+                opacity-50
                 hover:bg-gray-300
+                hover:opacity-100
                 cursor-pointer
             "
             (click)="updateImgIndexValueByNumber(-1)"
         >
-            <div class="absolute top-24 left-2">
+            <div class="absolute top-24 left-2 opacity-100">
                 <svg 
                     xmlns="http://www.w3.org/2000/svg" 
                     width="30" 
@@ -37,13 +42,15 @@
                 right-0
                 h-60
                 w-12
+                opacity-50
                 bg-gray-200
                 hover:bg-gray-300
+                hover:opacity-100
                 cursor-pointer
             "
             (click)="updateImgIndexValueByNumber(1)"
         >
-            <div class="absolute top-24 right-2">
+            <div class="absolute top-24 right-2 opacity-100">
                 <svg 
                     xmlns="http://www.w3.org/2000/svg" 
                     width="30" 
