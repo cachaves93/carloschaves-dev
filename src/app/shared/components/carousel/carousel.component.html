@@ -1,10 +1,16 @@
 <div class="w-full inline-block h-60 border border-black">
     <div class="w-full h-full relative">
-        <div class="flex flex-row justify-center">
+        <div class="relative flex flex-row justify-center">
             <img 
                 class="h-60 object-contain" 
-                [src]="imgUrls[currentImgIndex]" 
+                [src]="imgUrls[currentImgIndex]"
+                (loadstart)="toggleLoading(true)"
+                (load)="toggleLoading(false)"
             />
+            <div *ngIf="isLoadingImg" class="absolute w-full h-full bg-zinc-400 z-10"></div>
+            <div *ngIf="isLoadingImg" class="absolute lds-facebook loader top-30 left-[40%] z-20">
+                <div></div><div></div><div></div>
+            </div>
         </div>
         <div
             *ngIf="currentImgIndex > 0"
